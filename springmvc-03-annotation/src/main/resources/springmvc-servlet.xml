@@ -10,12 +10,14 @@
      http://www.springframework.org/schema/mvc
      https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!--自动扫描包，让指定包下的注解生效，由IOC容器统一管理-->
-    <context:component-scan base-package="com.dm.controller"/>
-    <!--让springmvc不处理静态文件-->
-    <mvc:default-servlet-handler/>
     <!--支持mvc驱动注解，帮我们注入了映射器和适配器这两个实例-->
     <mvc:annotation-driven/>
+
+    <!--让springmvc不处理静态文件-->
+    <mvc:default-servlet-handler/>
+
+    <!--自动扫描包，让指定包下的注解生效，由IOC容器统一管理-->
+    <context:component-scan base-package="com.dm.controller"/>
 
     <!--视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
